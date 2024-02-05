@@ -25,10 +25,10 @@ func (c *CFGExtractorListener) ExitNormalClassDeclaration(ctx *parser.NormalClas
 
 func (c *CFGExtractorListener) EnterMethodDeclaration(ctx *parser.MethodDeclarationContext) {
 	methodName := ctx.MethodHeader().MethodDeclarator().Identifier().GetText()
-	log.Println(fmt.Sprintf("Entering method --> %s$$%s", methodName))
+	log.Println(fmt.Sprintf("Entering method --> %s", methodName))
 }
 
 func (c *CFGExtractorListener) ExitMethodDeclaration(ctx *parser.MethodDeclarationContext) {
 	methodName := ctx.MethodHeader().MethodDeclarator().Identifier().GetText()
-	log.Println(fmt.Sprintf("Exiting method --> %s$$%s", methodName))
+	log.Println(fmt.Sprintf("Exiting method --> %s", methodName))
 }
